@@ -3,11 +3,32 @@
 This is an AMD plus Bower version of the original util-logging from: https://bitbucket.org/micovery/util-logging.
 
 It was created using `r.js -convert ./util-logging./ ./`.
-`util-logging` is a git submodule of `git@bitbucket.org:micovery/util-logging.git`
 
-Bower dependencies for the node standard modules have been declared in `bower.json`
+`util-logging` is a git submodule of `git@bitbucket.org:micovery/util-logging.git` so you have to take care of it being initialized and up to date.
 
-To load this with e.g. Require.js you need to give it a proper configuratuion, so it finds all the modules.
+Bower dependencies for the node standard modules have been declared in `bower.json` to install them run `bower install`
+
+
+To load this with e.g. Require.js you need to give it a proper configuratuion, so it finds all the modules. Something like this:
+
+
+```js
+require.config({
+    paths: {
+        "util": "bower_components/util/util"
+      , "path": "bower_components/path/path"
+      , "util-logging": "bower_components/util-logging"
+    },
+    packages: [
+        "util-logging",
+        {
+            name: "util-logging",
+            main: "index"
+        }
+    ]
+});
+
+```
 
 
 ## Original README
