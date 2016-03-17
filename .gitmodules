@@ -1,0 +1,3 @@
+[submodule "util-logging"]
+	path = util-logging
+	url = git@bitbucket.org:micovery/util-logging.git
