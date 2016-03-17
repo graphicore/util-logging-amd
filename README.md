@@ -4,10 +4,9 @@ This is an AMD plus Bower version of the original util-logging from: https://bit
 
 It was created using `r.js -convert ./util-logging./ ./`.
 
-`util-logging` is a git submodule of `git@bitbucket.org:micovery/util-logging.git` so you have to take care of it being initialized and up to date.
+`util-logging` is a git submodule of `git@bitbucket.org:micovery/util-logging.git` so you have to take care of it being initialized and up to date when you intend to update the files provided in here.
 
-Bower dependencies for the node standard modules have been declared in `bower.json` to install them run `bower install`
-
+Bower dependencies for the node standard modules have been declared in `bower.json` to install them run `bower install`. No need to do so for node.js.
 
 To load this with e.g. Require.js you need to give it a proper configuratuion, so it finds all the modules. Something like this:
 
