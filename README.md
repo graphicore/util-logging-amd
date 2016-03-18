@@ -2,7 +2,16 @@
 
 This is an AMD plus Bower version of the original util-logging from: https://bitbucket.org/micovery/util-logging.
 
-It was created using `r.js -convert ./util-logging./ ./`.
+It was created using:
+
+```
+r.js -convert ./util-logging./ ./
+
+# this removes ".js" from the calls to require, because that makes
+# the paths literal in AMD i.e. bypassing the require paths config
+find  -type d -path "./util-logging" -prune -o -type d -path "./bower_components" -prune -o -name "*.js" -exec sed -i -E "s/(require\(['|\"])(.+)(\.js)(['|\"]\))/\1\2\4/g" {} \;
+```
+
 
 `util-logging` is a git submodule of `git@bitbucket.org:micovery/util-logging.git` so you have to take care of it being initialized and up to date.
 
@@ -19,6 +28,7 @@ require.config({
       , "path": "bower_components/path/path"
       , "util-logging": "bower_components/util-logging"
     },
+    // This is not working as expected:
     packages: [
         "util-logging",
         {

@@ -10,31 +10,31 @@ module.exports = {
   /**
    * {@link Logger} class
    */
-  "Logger" :  require("./lib/logger.js"),
+  "Logger" :  require("./lib/logger"),
   /**
    * {@link Level} class
    */
-  "Level" : require("./lib/level.js"),
+  "Level" : require("./lib/level"),
   /**
    * {@link ConsoleHandler} class
    */
-  "ConsoleHandler" : require("./lib/consolehandler.js"),
+  "ConsoleHandler" : require("./lib/consolehandler"),
   /**
    * {@link ConsoleLogger} class
    */
-  "ConsoleLogger" : require("./lib/consolelogger.js"),
+  "ConsoleLogger" : require("./lib/consolelogger"),
   /**
    * {@link Handler} class
    */
-  "Handler" :  require("./lib/handler.js"),
+  "Handler" :  require("./lib/handler"),
   /**
    * {@link LogRecord} class
    */
-  "LogRecord" : require("./lib/logrecord.js"),
+  "LogRecord" : require("./lib/logrecord"),
   /**
    * @{link Formatter} class
    */
-  "Formatter": require("./lib/formatter.js")
+  "Formatter": require("./lib/formatter")
 }
 
 });
